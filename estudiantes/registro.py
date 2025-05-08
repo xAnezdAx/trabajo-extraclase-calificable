@@ -12,3 +12,10 @@ def cargar_estudiantes(ruta_csv):
             except ValueError:
                 continue  # Ignorar filas con notas no numéricas
     return estudiantes
+
+def mostrar_estudiantes(estudiantes):
+    estudiantes_ordenados = sorted(estudiantes, key=lambda x: x['nombre'])
+    print(f"{'Nombre':<20} {'Nota':<4}")
+    print("-" * 26)
+    for est in estudiantes_ordenados:
+        print(f"{est['nombre']:<20} {est['nota']:<4.1f}")
