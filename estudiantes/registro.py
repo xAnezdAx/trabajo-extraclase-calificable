@@ -1,5 +1,6 @@
 import csv
 
+
 def cargar_estudiantes(ruta_csv):
     estudiantes = []
     with open(ruta_csv, newline='', encoding='utf-8') as archivo:
